@@ -17,6 +17,10 @@ namespace OneTryCatchSample
             InitializeComponent();
             OnException += FrmMain_OnException;
         }
+        private void FrmMain_OnException(BaseForm sender, Generics.Args.ItemEventArgs<Exception> e)
+        {
+            BeginInvoke(lblError, () => { lblError.Text = e.Item.ToString(); });
+        }
 
 
         private void btnRun_Click(object sender, EventArgs e)
