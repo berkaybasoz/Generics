@@ -1,0 +1,8 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\bin\Debug\OperationResultSample.exe.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\bin\Debug\OperationResultSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\bin\Debug\OperationResultSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\bin\Debug\Generics.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\bin\Debug\Generics.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\obj\Debug\OperationResultSample.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\obj\Debug\OperationResultSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OperationResultSample\obj\Debug\OperationResultSample.pdb

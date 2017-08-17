@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemEventArgSample", "ItemE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTryCatchSample", "OneTryCatchSample\OneTryCatchSample.csproj", "{56ECDD3F-38C3-4D9B-84D9-C3150671F5B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationResultSample", "OperationResultSample\OperationResultSample.csproj", "{BC2B0F4A-9BBA-4909-BB55-276EC5ABE5D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{56ECDD3F-38C3-4D9B-84D9-C3150671F5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56ECDD3F-38C3-4D9B-84D9-C3150671F5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56ECDD3F-38C3-4D9B-84D9-C3150671F5B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2B0F4A-9BBA-4909-BB55-276EC5ABE5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2B0F4A-9BBA-4909-BB55-276EC5ABE5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2B0F4A-9BBA-4909-BB55-276EC5ABE5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2B0F4A-9BBA-4909-BB55-276EC5ABE5D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +42,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FDF2D7C3-70D8-4EC4-BB5A-F22B36BD660A} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
 		{56ECDD3F-38C3-4D9B-84D9-C3150671F5B2} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
+		{BC2B0F4A-9BBA-4909-BB55-276EC5ABE5D7} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
 	EndGlobalSection
 EndGlobal
