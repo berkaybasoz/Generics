@@ -1,0 +1,8 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\bin\Debug\ItemEventArgSample.exe.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\obj\Debug\ItemEventArgSample.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\bin\Debug\ItemEventArgSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\bin\Debug\ItemEventArgSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\bin\Debug\Generics.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\bin\Debug\Generics.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\obj\Debug\ItemEventArgSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\ItemEventArgSample\obj\Debug\ItemEventArgSample.pdb
