@@ -1,5 +1,4 @@
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\bin\Debug\Generics.dll
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\bin\Debug\Generics.pdb
-C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\obj\Debug\Generics.csprojResolveAssemblyReference.cache
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\obj\Debug\Generics.dll
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\obj\Debug\Generics.pdb

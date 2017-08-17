@@ -1,0 +1,10 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\bin\Debug\OneTryCatchSample.exe.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\bin\Debug\OneTryCatchSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\bin\Debug\OneTryCatchSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\bin\Debug\Generics.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\bin\Debug\Generics.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\obj\Debug\OneTryCatchSample.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\obj\Debug\OneTryCatchSample.frmMain.resources
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\obj\Debug\OneTryCatchSample.csproj.GenerateResource.Cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\obj\Debug\OneTryCatchSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\OneTryCatchSample\obj\Debug\OneTryCatchSample.pdb
