@@ -1,0 +1,5 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Infra\bin\Debug\Infra.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Infra\bin\Debug\Infra.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Infra\obj\Debug\Infra.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Infra\obj\Debug\Infra.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Infra\obj\Debug\Infra.pdb

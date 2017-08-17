@@ -1,0 +1,8 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\bin\Debug\SimpleMapperSample.exe.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\bin\Debug\SimpleMapperSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\bin\Debug\SimpleMapperSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\bin\Debug\Infra.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\bin\Debug\Infra.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\obj\Debug\SimpleMapperSample.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\obj\Debug\SimpleMapperSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\SimpleMapperSample\obj\Debug\SimpleMapperSample.pdb
