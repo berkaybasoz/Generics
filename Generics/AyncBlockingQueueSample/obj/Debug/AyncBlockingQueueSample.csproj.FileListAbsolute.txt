@@ -1,0 +1,14 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.Forms.Form1.resources
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.Forms.BaseForm.resources
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.Properties.Resources.resources
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.csproj.GenerateResource.Cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\AyncBlockingQueueSample.exe.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\AyncBlockingQueueSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\AyncBlockingQueueSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\Generics.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\Generics.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\AyncBlockingQueueSample\obj\Debug\AyncBlockingQueueSample.pdb
