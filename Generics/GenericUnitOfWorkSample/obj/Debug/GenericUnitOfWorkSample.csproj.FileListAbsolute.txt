@@ -1,0 +1,15 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\GenericUnitOfWorkSample.exe.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\GenericUnitOfWorkSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\GenericUnitOfWorkSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\DataAccess.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\EntityFramework.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\DataAccess.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\EntityFramework.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\obj\Debug\GenericUnitOfWorkSample.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\obj\Debug\GenericUnitOfWorkSample.exe
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\obj\Debug\GenericUnitOfWorkSample.pdb

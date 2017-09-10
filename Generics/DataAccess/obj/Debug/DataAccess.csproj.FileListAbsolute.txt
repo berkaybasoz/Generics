@@ -1,0 +1,10 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\DataAccess\obj\Debug\DataAccess.pdb
