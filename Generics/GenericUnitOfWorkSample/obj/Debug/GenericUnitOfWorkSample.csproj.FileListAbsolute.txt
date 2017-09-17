@@ -13,3 +13,16 @@ C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSampl
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\obj\Debug\GenericUnitOfWorkSample.csprojResolveAssemblyReference.cache
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\obj\Debug\GenericUnitOfWorkSample.exe
 C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\obj\Debug\GenericUnitOfWorkSample.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.xml
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\GenericUnitOfWorkSample\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
