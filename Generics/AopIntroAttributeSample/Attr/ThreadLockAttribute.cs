@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace AopIntroAttributeSample.Attr
 {
-    public class ThreadLock : InterceptAttribute, IPreVoidInterception, IPostVoidInterception
+    public class ThreadLockAttribute : InterceptAttribute, IPreVoidInterception, IPostVoidInterception
     {
         private Mutex mutex = new Mutex();
+
         public void OnPre(PreInterceptArgs e)
         {
             mutex.WaitOne();//Thread lock yapıyoruz
@@ -19,7 +20,6 @@ namespace AopIntroAttributeSample.Attr
         public void OnPost(PostInterceptArgs e)
         {
             mutex.ReleaseMutex();//Thread release yapıyoruz
-        }
-
+        } 
     }
 }
