@@ -22,12 +22,17 @@ namespace AopIntroAttributeSample.Service
             return new BankAccountCollection(bankAccounts.Where(w => w.BranchCode == branchCode));
         }
 
-        [Exception]
-        public void Deposit(int accountNumber, decimal money)
-        { 
-            // Exception attribute içerisinde burda fırlattığımız hatayı loglayıp friendly name ile değiştireceğiz
-            throw new NotImplementedException();
+        [ThreadLock]
+        [Authorize(Roles = new string[] { "Admin" })]
+        public void WithDraw(int accountNumber, decimal money)
+        {
         }
 
+        [Exception]
+        public void Deposit(int accountNumber, decimal money)
+        {
+            // Exception attribute içerisinde burda fırlattığımız hatayı loglayıp friendly name ile değiştireceğiz
+            throw new NotImplementedException();
+        } 
     }
 }

@@ -10,8 +10,8 @@ namespace AopIntroAttributeSample.Service
 {
     public interface IBankAccountService
     {
-        BankAccountCollection GetBankAccounts(int branchCode);
-
+        BankAccountCollection GetBankAccounts(int branchCode); 
+        void WithDraw(int accountNumber, decimal money);
         void Deposit(int accountNumber, decimal money);
     }
 }

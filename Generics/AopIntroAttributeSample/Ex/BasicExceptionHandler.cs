@@ -20,12 +20,12 @@ namespace AopIntroAttributeSample.Ex
 
         public void Handle(Exception ex)
         {
-            logger.Log(ex.ToString());
+            logger.Log("BasicExceptionHandler => " + ex.ToString());
         }
 
         public void Handle(ExceptionInterceptArgs arg)
-        {  
-            logger.Log(arg.ToString());
+        {
+            logger.Log("BasicExceptionHandler => " + arg.ToString());
         }
 
     }
