@@ -13,10 +13,10 @@ namespace AopIntroAttributeSample.Attr
 {
     public class ExceptionAttribute : InterceptAttribute, IExceptionInterception
     {
-        private readonly IExceptionHandler handler; 
+        private readonly IExceptionHandler handler;
 
-        public ExceptionAttribute( )
-        { 
+        public ExceptionAttribute()
+        {
             handler = ContainerContext.Resolve<IExceptionHandler>();
         }
 

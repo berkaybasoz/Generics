@@ -70,6 +70,8 @@
     <Compile Include="Attr\CacheAttribute.cs" />
     <Compile Include="Attr\ExceptionAttribute.cs" />
     <Compile Include="Attr\LogAttribute.cs" />
+    <Compile Include="Cache\BasicCacheProvider.cs" />
+    <Compile Include="Cache\ICacheProvider.cs" />
     <Compile Include="Container\ContainerContext.cs" />
     <Compile Include="Ex\BasicExceptionHandler.cs" />
     <Compile Include="Ex\IExceptionHandler.cs" />

@@ -21,16 +21,23 @@ namespace AopIntroAttributeSample
 
                 IBankAccountService productService = BankAccountServiceFactory.CreateTransparentProxy();
 
+                //servis üzerinden normal şekilde veriler gelecek
                 BankAccountCollection bankAccounts = productService.GetBankAccounts(1);
-
                 foreach (var bankAccount in bankAccounts)
                 {
                     Console.WriteLine(bankAccount.ToString());
                 }
 
+                //cache üzerinden gelecek
+                bankAccounts = productService.GetBankAccounts(1);
+                foreach (var bankAccount in bankAccounts)
+                {
+                    Console.WriteLine(bankAccount.ToString());
+                }
+                 
                 //hata verdirmeye calisiyoruz
                 productService.Deposit(1000, 200000);
-                
+
             }
             catch (Exception ex)
             {

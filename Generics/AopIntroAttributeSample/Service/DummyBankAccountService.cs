@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AopIntroAttributeSample.Model;
 using AopIntroAttributeSample.Attr;
+using System.Threading;
 
 namespace AopIntroAttributeSample.Service
 {
@@ -16,6 +17,7 @@ namespace AopIntroAttributeSample.Service
         [Cache(DurationInMinute = 10)]
         public BankAccountCollection GetBankAccounts(int branchCode)
         {
+            Thread.Sleep(1000);
             return new BankAccountCollection(bankAccounts.Where(w => w.BranchCode == branchCode));
         }
 

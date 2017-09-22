@@ -1,4 +1,6 @@
-﻿using AopIntroAttributeSample.Interception;
+﻿using AopIntroAttributeSample.Cache;
+using AopIntroAttributeSample.Container;
+using AopIntroAttributeSample.Interception;
 using AopIntroAttributeSample.Model;
 using System;
 using System.Collections.Generic;
@@ -10,25 +12,34 @@ namespace AopIntroAttributeSample.Attr
 {
     public class CacheAttribute : InterceptAttribute, IPreInterception, IPostVoidInterception
     {
+        private readonly ICacheProvider cacheProvider;
+
         public int DurationInMinute { get; set; }
+
+        public CacheAttribute()
+        {
+            cacheProvider = ContainerContext.Resolve<ICacheProvider>();
+        }
 
         public object OnPre(PreInterceptArgs e)
         {
-            string cacheKey = string.Format("{0}_{1}", e.MethodName, string.Join("_", e.Arguments));
-             
             // gerekli cache key ile kontrol ederek varsa cache'de çağırım öncesi metot'u execute
             // etmeden cache üzerinden ilgili veriyi geri dön.
-
-            Console.WriteLine("{0} isimli cache key ile cache üzerinden geliyorum!", cacheKey);
-            return new BankAccountCollection(new List<BankAccount>() { new BankAccount() { AccountNumber = 1000, BranchCode = 1000, Money = -1000 } });
-
+            string cacheKey = string.Format("{0}_{1}", e.MethodName, string.Join("_", e.Arguments));
+            object data;
+            if (cacheProvider.TryGetData(cacheKey, out data))
+            {
+                //Proxy içinde esas metodu çalıştırma ben cache üzerinde veri buldum bu veriyi dön diyoruz
+                e.OverrideReturnValue = true;
+            }
+            return data;
         }
 
         public void OnPost(PostInterceptArgs e)
         {
+            //key ile veriyi cache'e ekle yada güncelle.
             string cacheKey = string.Format("{0}_{1}", e.MethodName, string.Join("_", e.Arguments));
-
-            // cache key ile ilgili veriyi DurationInMinute kullanarak Cache'e ekle veya güncelle.
+            cacheProvider.SetData(cacheKey, e.Value);
         }
     }
 }

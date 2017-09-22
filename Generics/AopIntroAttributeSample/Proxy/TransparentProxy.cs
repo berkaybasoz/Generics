@@ -19,12 +19,14 @@ namespace AopIntroAttributeSample.Proxy
         {
 
         }
+
         public static K CreateNew(Predicate<MethodInfo> filter = null)
         {
             var instance = new TransparentProxy<T, K>();
             instance.filter = filter;
             return (K)instance.GetTransparentProxy();
         }
+
         public Predicate<MethodInfo> Filter
         {
             get { return filter; }
@@ -36,52 +38,62 @@ namespace AopIntroAttributeSample.Proxy
                     filter = value;
             }
         }
-        // İlgili metot çağırıldığında çalışacak olan metotdur.
+
+        //Attribute olarak eklenen metot çağırıldığında çalışacak olan metotdur.
         public override IMessage Invoke(IMessage msg)
         {
             var methodCallMessage = msg as IMethodCallMessage;
             ReturnMessage returnMessage = null;
-            MethodInfo mInfo = null;
-            object[] aspects = null;
+            object[] interceptions = null;
             InterceptArgs e = CreateEventArgs(methodCallMessage);
             try
             {
-                // tipimiz üzerinden metot infoya erişerek ilgili attribute olarak eklenmiş
-                // aspect'lerimizi buluyoruz.
-                var realType = typeof(T);
-                mInfo = realType.GetMethod(methodCallMessage.MethodName);
-                aspects = mInfo.GetCustomAttributes(typeof(IInterception), true);
+                interceptions = GetInterceptions(methodCallMessage);
 
-                // Before aspectlerimizi çalıştırıyoruz önce ve geriye değer dönen varsa respons'a eşitliyoruz.
-                object response = OnPreIntercept(aspects, new PreInterceptArgs(e));
+                // PreInterceptionlarımız çalıştırıyoruz, cache tarzı geriye donen attribute varsa bunlardan donen sonucu alıyoruz 
+                PreInterceptArgs preArg = new PreInterceptArgs(e);
+                object result = OnPreIntercept(interceptions, preArg);
 
-                object result = null;
-
-                // Response boş değilse, buradaki veri cache üzerinden de geliyor olabilir ve tekrardan invoke etmeye
-                // gerek yok, direkt olarak geriye response dönebiliriz bu durumda.
-                if (response != null)
+                // OverrideReturnValue true ise esas metodu çalıştırmamıza gerek yok
+                if (preArg.OverrideReturnValue)
                 {
-                    returnMessage = new ReturnMessage(response, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
+                    returnMessage = new ReturnMessage(result, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
                 }
                 else
                 {
-                    // Response boş ise ilgili metot'u artık invoke ederek çalıştırıyor ve sonucunu alıyoruz.
+                    // boş resultımız olduğuna göre ilgili metodu çalıştırabiliriz
                     result = methodCallMessage.MethodBase.Invoke(new T(), methodCallMessage.InArgs);
                     returnMessage = new ReturnMessage(result, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
                 }
 
-                OnPostIntercept(aspects, new PostInterceptArgs(e, result));
+                OnPostIntercept(interceptions, new PostInterceptArgs(e, result));
 
-                // After aspectlerimizi'de çalıştırdıktan sonra artık geriye çıktıyı dönebiliriz.
+                // PostInterceptionlarımız çalıştırdıktan sonra artık geriye çıktıyı dönebiliriz.
                 return returnMessage;
             }
             catch (Exception ex)
             {
                 var exArg = new ExceptionInterceptArgs(e, ex);
-                OnErrorIntercept(aspects, exArg);
+                OnErrorIntercept(interceptions, exArg);
                 return new ReturnMessage(exArg.Ex, methodCallMessage);
             }
         }
+
+        private object[] GetInterceptions(IMethodCallMessage methodCallMessage)
+        {
+            // tipimiz üzerinden metot infoya erişerek ilgili attribute olarak eklenmiş
+            // Interception'larımızı buluyoruz.
+            var realType = typeof(T);
+            MethodInfo mInfo = realType.GetMethod(methodCallMessage.MethodName);
+            return mInfo.GetCustomAttributes(typeof(IInterception), true);
+        }
+
+        private InterceptArgs CreateEventArgs(IMethodCallMessage methodCallMessage)
+        {
+            InterceptArgs e = new InterceptArgs(methodCallMessage.MethodName, methodCallMessage.InArgs);
+            return e;
+        }
+
         private object OnPreIntercept(object[] aspects, PreInterceptArgs e)
         {
             object response = null;
@@ -121,14 +133,6 @@ namespace AopIntroAttributeSample.Proxy
                 }
             }
         }
-        private InterceptArgs CreateEventArgs(IMethodCallMessage methodCallMessage)
-        {
-            InterceptArgs e = new InterceptArgs(methodCallMessage.MethodName, methodCallMessage.InArgs);
-            return e;
-        }
-        private bool IsRaisable(MethodInfo methodInfo)
-        {
-            return (filter == null || filter(methodInfo));
-        }
+
     }
 }
