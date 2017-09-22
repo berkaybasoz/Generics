@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericUnitOfWorkSample", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AopIntroSample", "AopIntroSample\AopIntroSample.csproj", "{D16FDB04-BB8D-40F8-85FF-4677C30DDC26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AopIntroAttributeSample", "AopIntroAttributeSample\AopIntroAttributeSample.csproj", "{E6F032C9-D487-4DB0-B7EF-5FC1F63BC088}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{D16FDB04-BB8D-40F8-85FF-4677C30DDC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D16FDB04-BB8D-40F8-85FF-4677C30DDC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D16FDB04-BB8D-40F8-85FF-4677C30DDC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6F032C9-D487-4DB0-B7EF-5FC1F63BC088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6F032C9-D487-4DB0-B7EF-5FC1F63BC088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6F032C9-D487-4DB0-B7EF-5FC1F63BC088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6F032C9-D487-4DB0-B7EF-5FC1F63BC088}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,5 +89,6 @@ Global
 		{447E15AF-A429-4D00-BC46-16B92CBF7A1B} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
 		{D07571F6-36FB-448A-AA15-236143E62971} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
 		{D16FDB04-BB8D-40F8-85FF-4677C30DDC26} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
+		{E6F032C9-D487-4DB0-B7EF-5FC1F63BC088} = {D053BAFB-AEB7-48DC-9A63-020927DCE313}
 	EndGlobalSection
 EndGlobal

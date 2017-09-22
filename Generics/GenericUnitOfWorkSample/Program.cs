@@ -71,7 +71,7 @@ namespace GenericUnitOfWorkSample
         private static void InvokeUnitySample()
         {
             IUnityContainer container = new UnityContainer();
-            container.RegisterType<IRepository<User>, EFRepository<User>>();
+            //container.RegisterType<IRepository<User>, EFRepository<User>>();
             container.LoadConfiguration();
             IRepository<User> tmp = container.Resolve<IRepository<User>>();
             int count = tmp.GetAll().Count();

@@ -1,0 +1,4 @@
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\bin\Release\Generics.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\bin\Release\Generics.pdb
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\obj\Release\Generics.dll
+C:\Users\is97100\Desktop\Samples\DotNet\Generics\Generics\Generics\obj\Release\Generics.pdb

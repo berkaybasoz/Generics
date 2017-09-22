@@ -40,6 +40,7 @@ namespace AopIntroSample
             Console.WriteLine("\r\n CreateFlexibleDynamicProxy Loglama program bitti \r\n***");
             Console.ReadLine();
         }
+
         private static void CreateFilteredDynamicProxy()
         {
             Console.WriteLine("***\r\n CreateFilteredDynamicProxy Loglama program başladı \r\n");
