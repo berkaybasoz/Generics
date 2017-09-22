@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AopIntroAttributeSample.Model;
 using AopIntroAttributeSample.Attr;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace AopIntroAttributeSample.Service
 {
@@ -23,7 +24,8 @@ namespace AopIntroAttributeSample.Service
 
         [Exception]
         public void Deposit(int accountNumber, decimal money)
-        {
+        { 
+            // Exception attribute içerisinde burda fırlattığımız hatayı loglayıp friendly name ile değiştireceğiz
             throw new NotImplementedException();
         }
 
