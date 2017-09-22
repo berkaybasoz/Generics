@@ -13,13 +13,10 @@ namespace AopIntroAttributeSample.Attr
 {
     public class ExceptionAttribute : InterceptAttribute, IExceptionInterception
     {
-        private readonly IExceptionHandler handler;
+        private readonly IExceptionHandler handler; 
 
-        private readonly bool reThrow;
-
-        public ExceptionAttribute(bool reThrow = true)
-        {
-            this.reThrow = reThrow;
+        public ExceptionAttribute( )
+        { 
             handler = ContainerContext.Resolve<IExceptionHandler>();
         }
 
@@ -27,7 +24,7 @@ namespace AopIntroAttributeSample.Attr
         {
             handler.Handle(e.Ex);
 
-            e.IsHandled = !reThrow;
+            e.Ex = new ApplicationException("Şuan işleminizi gerçekleştiremiyoruz.");
         }
     }
 }

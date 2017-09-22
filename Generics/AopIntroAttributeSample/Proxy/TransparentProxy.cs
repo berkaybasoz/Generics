@@ -13,9 +13,6 @@ namespace AopIntroAttributeSample.Proxy
     public class TransparentProxy<T, K> : RealProxy where T : K, new()
     {
         private Predicate<MethodInfo> filter;
-        public event EventHandler<IMethodCallMessage> OnExecuting;
-        public event EventHandler<IMethodCallMessage> OnExecuted;
-        public event EventHandler<IMethodCallMessage> OnError;
 
         public TransparentProxy()
             : base(typeof(K))
@@ -46,21 +43,17 @@ namespace AopIntroAttributeSample.Proxy
             ReturnMessage returnMessage = null;
             MethodInfo mInfo = null;
             object[] aspects = null;
-            InterceptArgs e = null;
+            InterceptArgs e = CreateEventArgs(methodCallMessage);
             try
             {
-                RaiseOnExecuting(methodCallMessage);
-
                 // tipimiz üzerinden metot infoya erişerek ilgili attribute olarak eklenmiş
                 // aspect'lerimizi buluyoruz.
                 var realType = typeof(T);
                 mInfo = realType.GetMethod(methodCallMessage.MethodName);
                 aspects = mInfo.GetCustomAttributes(typeof(IInterception), true);
 
-                e = CreateEventArgs(methodCallMessage);
-
                 // Before aspectlerimizi çalıştırıyoruz önce ve geriye değer dönen varsa respons'a eşitliyoruz.
-                object response = InvokePreIntercept(aspects, new PreInterceptArgs(e));
+                object response = OnPreIntercept(aspects, new PreInterceptArgs(e));
 
                 object result = null;
 
@@ -77,28 +70,19 @@ namespace AopIntroAttributeSample.Proxy
                     returnMessage = new ReturnMessage(result, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
                 }
 
-                InvokePostIntercept(aspects, new PostInterceptArgs(e, result));
-                RaiseOnExecuted(methodCallMessage);
+                OnPostIntercept(aspects, new PostInterceptArgs(e, result));
+
                 // After aspectlerimizi'de çalıştırdıktan sonra artık geriye çıktıyı dönebiliriz.
                 return returnMessage;
             }
             catch (Exception ex)
             {
-                RaiseOnError(methodCallMessage);
-
                 var exArg = new ExceptionInterceptArgs(e, ex);
-                InvokeErrorIntercept(aspects, exArg);
-                if (!exArg.IsHandled)
-                {
-                    return new ReturnMessage(ex, methodCallMessage);
-                }
-                else
-                {
-                    return new ReturnMessage(null, null, 0, methodCallMessage.LogicalCallContext, methodCallMessage);
-                }
+                OnErrorIntercept(aspects, exArg);
+                return new ReturnMessage(exArg.Ex, methodCallMessage);
             }
         }
-        private object InvokePreIntercept(object[] aspects, PreInterceptArgs e)
+        private object OnPreIntercept(object[] aspects, PreInterceptArgs e)
         {
             object response = null;
             foreach (IInterception loopAttribute in aspects)
@@ -114,7 +98,7 @@ namespace AopIntroAttributeSample.Proxy
             }
             return response;
         }
-        private void InvokePostIntercept(object[] aspects, PostInterceptArgs e)
+        private void OnPostIntercept(object[] aspects, PostInterceptArgs e)
         {
             foreach (IInterception loopAttribute in aspects)
             {
@@ -124,7 +108,7 @@ namespace AopIntroAttributeSample.Proxy
                 }
             }
         }
-        private void InvokeErrorIntercept(object[] aspects, ExceptionInterceptArgs e)
+        private void OnErrorIntercept(object[] aspects, ExceptionInterceptArgs e)
         {
             if (aspects == null)
                 return;
@@ -135,33 +119,6 @@ namespace AopIntroAttributeSample.Proxy
                 {
                     ((IExceptionInterception)loopAttribute).OnException(e);
                 }
-            }
-        }
-        private void RaiseOnExecuting(IMethodCallMessage methodCall)
-        {
-            if (OnExecuting != null)
-            {
-                var methodInfo = methodCall.MethodBase as MethodInfo;
-                if (IsRaisable(methodInfo))
-                    OnExecuting(this, methodCall);
-            }
-        }
-        private void RaiseOnExecuted(IMethodCallMessage methodCall)
-        {
-            if (OnExecuted != null)
-            {
-                var methodInfo = methodCall.MethodBase as MethodInfo;
-                if (IsRaisable(methodInfo))
-                    OnExecuted(this, methodCall);
-            }
-        }
-        private void RaiseOnError(IMethodCallMessage methodCall)
-        {
-            if (OnError != null)
-            {
-                var methodInfo = methodCall.MethodBase as MethodInfo;
-                if (IsRaisable(methodInfo))
-                    OnError(this, methodCall);
             }
         }
         private InterceptArgs CreateEventArgs(IMethodCallMessage methodCallMessage)

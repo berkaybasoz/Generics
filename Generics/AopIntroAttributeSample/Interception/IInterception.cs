@@ -95,8 +95,7 @@ namespace AopIntroAttributeSample.Interception
     public class ExceptionInterceptArgs : InterceptArgs
     {
 
-        public Exception Ex { get; protected set; }
-        public bool IsHandled { get; set; }
+        public Exception Ex { get; set; }
 
         public ExceptionInterceptArgs(string methodName, object[] arguments)
             : base(methodName, arguments)

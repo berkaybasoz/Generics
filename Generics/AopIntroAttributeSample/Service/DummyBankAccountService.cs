@@ -19,7 +19,7 @@ namespace AopIntroAttributeSample.Service
             return new BankAccountCollection(bankAccounts.Where(w => w.BranchCode == branchCode));
         }
 
-        [Exception(false)]
+        [Exception]
         public void Deposit(int accountNumber, decimal money)
         {
             throw new NotImplementedException();
