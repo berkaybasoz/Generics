@@ -20,15 +20,17 @@ namespace AopIntroAttributeSample
 
             IBankAccountService productService = BankAccountServiceFactory.CreateTransparentProxy();
 
+            int branchCode = 1, accountNumber = 1000;
+
             //servis üzerinden normal şekilde veriler gelecek
-            BankAccountCollection bankAccounts = productService.GetBankAccounts(1);
+            BankAccountCollection bankAccounts = productService.GetBankAccounts(branchCode);
             foreach (var bankAccount in bankAccounts)
             {
                 Console.WriteLine(bankAccount.ToString());
             }
 
             //cache üzerinden gelecek
-            bankAccounts = productService.GetBankAccounts(1);
+            bankAccounts = productService.GetBankAccounts(branchCode);
             foreach (var bankAccount in bankAccounts)
             {
                 Console.WriteLine(bankAccount.ToString());
@@ -37,13 +39,13 @@ namespace AopIntroAttributeSample
             Run(() =>
             {
                 //[Authorize] içerinde Admin userı çalıştırabilir sadece
-                productService.WithDraw(1000, 200000);
+                productService.WithDraw(accountNumber, 200000);
             });
 
             Run(() =>
             {
                 //[Exception] attribute için hata fırlatıyoruz içeride
-                productService.Deposit(1000, 200000);
+                productService.Deposit(accountNumber, 200000);
             });
 
             Console.ReadLine();
